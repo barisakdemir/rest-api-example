@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "14d8298d-e6d9-47a2-80eb-d6046917f548",
+		"name": "rest-api-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "company/register",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"site_url\": \"http://example.com\",\n    \"name\": \"name\",\n    \"lastname\": \"lastname\",\n    \"company_name\": \"company name\",\n    \"email\": \"example@example.com\",\n    \"password\": \"Baris*!asdasdasdasd1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/list?_token=$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"list"
+					],
+					"query": [
+						{
+							"key": "_token",
+							"value": "$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "packages/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/packages/list?_token=$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"packages",
+						"list"
+					],
+					"query": [
+						{
+							"key": "_token",
+							"value": "$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company-packages/add",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"company_id\": 21,\n    \"package_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/packages/add?_token=$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"packages",
+						"add"
+					],
+					"query": [
+						{
+							"key": "_token",
+							"value": "$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company-packages/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/packages/list?_token=$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"packages",
+						"list"
+					],
+					"query": [
+						{
+							"key": "_token",
+							"value": "$2y$10$FXH8a7iIJnSksc5eqkUfUO9qdrxptY1tu7vSsaCm62qBeCU19na4K"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
