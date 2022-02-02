@@ -19,6 +19,8 @@ Edit .env file for MySql information then
 
 ```bash
 composer install
+php artisan key:generate
+php artisan config:cache
 php artisan migrate:refresh --seed
 php artisan serve
 ```
