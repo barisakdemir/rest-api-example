@@ -1,5 +1,10 @@
 # rest-api-example
 
+Rest Api Example build on Laravel. <br />
+Laravel version: 8.81.0 <br />
+Php version: 8.1.2 <br />
+MySql version: 8.0.27 <br />
+
 ## Installation
 
 Use the git and composer to install
