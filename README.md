@@ -28,5 +28,5 @@ Crontab jobs
 
 ## Tests on postman import json
 
-[a link](https://github.com/barisakdemir/rest-api-example/blob/main/rest-api-example.postman_collection.json)
+[Postman Json File](https://github.com/barisakdemir/rest-api-example/blob/main/rest-api-example.postman_collection.json)
 
