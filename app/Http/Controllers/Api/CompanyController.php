@@ -55,10 +55,10 @@ class CompanyController extends Controller
         /*return success message end*/
     }
 
-    public function list()
+    public function list(Request $request)
     {
         //list from database
-        $company = Company::find(session('company_id'), ['id', 'status', 'site_url', 'name', 'lastname', 'company_name', 'email', 'created_at']);
+        $company = Company::find($request->company_id, ['id', 'status', 'site_url', 'name', 'lastname', 'company_name', 'email', 'created_at']);
 
         /*return list*/
         $responseArr['status']  = true;

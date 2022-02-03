@@ -28,23 +28,25 @@ class ApiTokenIsValid
         /*check token is valid? end*/
 
         /*compare token and company_id if exist*/
-        if(isset($request->company_id)) {
+        if(isset($request->company_id) and $isTokenInvalid == false) {
             if ($company->id != $request->company_id) {
                 $isTokenInvalid = true;
             }
         }
         /*compare token and company_id if exist end*/
 
+        //add company id to request
+        if($company and $isTokenInvalid == false) {
+            $request->mergeIfMissing(['company_id' => $company->id]);
+        }
+
         /*return error message*/
         if($isTokenInvalid == true) {
             $responseArr['status']  = false;
-        $responseArr['message'] = 'Invalid Token!';
-        return response()->json($responseArr);
+            $responseArr['message'] = 'Invalid Token!';
+            return response()->json($responseArr);
         }
         /*return error message end*/
-
-        //set company id to session
-        session(['company_id' => $company->id]);
 
         return $next($request);
     }

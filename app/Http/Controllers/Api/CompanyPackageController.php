@@ -58,10 +58,10 @@ class CompanyPackageController extends Controller
         /*return success message end*/
     }
 
-    public function list()
+    public function list(Request $request)
     {
         //list from database
-        $companyPackages = Company::find(session('company_id'))->companyPackages()->get();
+        $companyPackages = Company::find($request->company_id)->companyPackages()->get();
 
         /*return list*/
         $responseArr['status']  = true;
